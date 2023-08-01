@@ -17,7 +17,8 @@ data class PopularMovieDto(
             id = id,
             title = title,
             overview = overview,
-            voteAverage = voteAverage
+            voteAverage = voteAverage,
+            releaseDate = releaseDate
         )
     }
 }

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MyCinemaListYT</string>
+    <string name="movie_cover">Movie Cover</string>
+    <string name="movie_text">Movie Text</string>
+    <string name="release_date">Release date: YYYY/MM/DD</string>
+    <string name="vote_average">Vote Average: 10.0</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing.</string>
 </resources>

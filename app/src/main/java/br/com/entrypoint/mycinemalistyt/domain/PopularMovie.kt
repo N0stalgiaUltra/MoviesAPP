@@ -5,5 +5,6 @@ data class PopularMovie(
     val id: Long,
     val title: String,
     val overview: String,
-    val voteAverage: Double
+    val voteAverage: Double,
+    val releaseDate: String
 )

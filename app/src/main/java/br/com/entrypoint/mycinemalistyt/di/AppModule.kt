@@ -1,6 +1,7 @@
 package br.com.entrypoint.mycinemalistyt.di
 
 import br.com.entrypoint.mycinemalistyt.data.remote.MoviesAPI
+import br.com.entrypoint.mycinemalistyt.presentation.CardAdapter
 import br.com.entrypoint.mycinemalistyt.presentation.MainViewModel
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import okhttp3.Interceptor
@@ -50,5 +51,11 @@ val viewModelModule = module {
         MainViewModel(
             get()
         )
+    }
+}
+
+val cardAdapterModule = module{
+    single {
+        CardAdapter()
     }
 }

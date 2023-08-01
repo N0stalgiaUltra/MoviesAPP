@@ -1,5 +1,6 @@
 package br.com.entrypoint.mycinemalistyt.presentation
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -29,6 +30,7 @@ class MainViewModel(val api: MoviesAPI): ViewModel(){
                     response: Response<PopularMovieResponse>
                 ) {
                     if(response.isSuccessful){
+                        Log.d("response", "successful")
                         _popularMovies.value = response.body()?.popularMovies?.map {
                             it.toPopularMovie()
                         }
