@@ -10,12 +10,16 @@ import br.com.entrypoint.mycinemalistyt.domain.PopularMovie
 class CardAdapter:
     RecyclerView.Adapter<CardViewHolder>() {
 
-    private var movies: List<PopularMovie>? = null
+    private var movies: List<PopularMovie>? = emptyList()
 
     fun setMovies(movies: List<PopularMovie>?){
-        Log.d("Adapter", "${this.movies?.size}, ${movies?.size}")
         this.movies = movies
-        notifyDataSetChanged()
+        //notifyDataSetChanged()
+    }
+
+    fun clearMovies(){
+        movies = emptyList()
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewHolder {
