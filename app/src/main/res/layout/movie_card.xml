@@ -3,66 +3,65 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    >
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
         android:layout_margin="10dp"
         android:clickable="true"
+        app:cardCornerRadius="10dp"
         app:cardElevation="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/card_img"
                 android:layout_width="match_parent"
-                android:layout_height="450dp"
+                android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/movie_cover"
-                android:src="@drawable/ic_launcher_background"/>
+                android:src="@drawable/ic_launcher_background" />
 
             <TextView
                 android:id="@+id/card_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/movie_text"
-                android:textSize="30sp"
-                android:lines="2"
+                android:lines="3"
+                android:text="Movie Title"
+                android:contentDescription="Movie title"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-            />
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/card_release_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:text="@string/release_date"
-                android:textSize="20sp"
-                android:lines="2"
-                android:textColor="@color/black"
-                android:textStyle="bold"
                 android:layout_margin="10dp"
-                />
+                android:gravity="center_vertical"
+                android:lines="2"
+                android:text="Release date: YYYY/MM/DD"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/card_vote_avg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:text="@string/vote_average"
-                android:textSize="20sp"
-                android:lines="2"
-                android:textColor="@color/black"
-                android:textStyle="bold"
                 android:layout_margin="10dp"
-                />
+                android:gravity="center_vertical"
+                android:lines="2"
+                android:text="Vote Average: 10.0"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

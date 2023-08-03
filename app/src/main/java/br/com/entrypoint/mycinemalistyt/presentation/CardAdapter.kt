@@ -14,7 +14,6 @@ class CardAdapter:
 
     fun setMovies(movies: List<PopularMovie>?){
         this.movies = movies
-        //notifyDataSetChanged()
     }
 
     fun clearMovies(){
@@ -26,7 +25,9 @@ class CardAdapter:
 
         val from = LayoutInflater.from(parent.context)
         val binding = MovieCardBinding.inflate(from, parent, false)
-        return CardViewHolder(binding)
+
+        return CardViewHolder(movieCardBinding = binding,
+            context = parent.context)
     }
 
     override fun getItemCount(): Int{
