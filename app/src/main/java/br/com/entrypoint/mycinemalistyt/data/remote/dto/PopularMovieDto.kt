@@ -10,7 +10,9 @@ data class PopularMovieDto(
     @SerializedName("release_date")
     val releaseDate: String,
     @SerializedName("vote_average")
-    val voteAverage: Double
+    val voteAverage: Double,
+    @SerializedName("poster_path")
+    val moviePoster: String
 ){
     fun toPopularMovie(): PopularMovie{
         return PopularMovie(
@@ -18,7 +20,8 @@ data class PopularMovieDto(
             title = title,
             overview = overview,
             voteAverage = voteAverage,
-            releaseDate = releaseDate
+            releaseDate = releaseDate,
+            moviePoster = moviePoster
         )
     }
 }

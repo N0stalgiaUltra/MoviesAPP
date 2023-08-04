@@ -39,5 +39,7 @@ class CardAdapter:
         if(movie != null)
             holder.bindMovie(movies?.get(position) ?: return)
     }
+
+
 }
 
