@@ -3,6 +3,7 @@ package br.com.entrypoint.mycinemalistyt.presentation
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import br.com.entrypoint.mycinemalistyt.R
 import br.com.entrypoint.mycinemalistyt.databinding.ActivityDetailBinding
 import com.bumptech.glide.Glide
 import org.koin.android.ext.android.bind
@@ -32,8 +33,14 @@ class DetailActivity : AppCompatActivity() {
     private fun changeText(){
         binding.cardTitle.text = intent.getStringExtra("movie_title")
         binding.detailDescription.text = intent.getStringExtra("movie_overview")
-        binding.cardVoteAvg.text = intent.getStringExtra("movie_vote_avg")
-        binding.cardReleaseDate.text = intent.getStringExtra("movie_release_date")
+
+        binding.cardVoteAvg.text = binding.root.context.getString(
+            R.string.vote_average,
+            intent.getDoubleExtra("movie_vote_avg", 0.0))
+
+        binding.cardReleaseDate.text = binding.root.context.getString(
+            R.string.release_date,
+            intent.getStringExtra("movie_release_date"))
     }
 
     private fun getMoviePoster(){
@@ -43,6 +50,7 @@ class DetailActivity : AppCompatActivity() {
             .with(applicationContext)
             .load(IMAGE_PATH+intent.getStringExtra("movie_poster"))
             .into(binding.cardImg)
+
 
     }
 }

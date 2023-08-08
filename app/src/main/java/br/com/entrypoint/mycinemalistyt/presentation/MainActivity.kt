@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.entrypoint.mycinemalistyt.databinding.ActivityMainBinding
 import br.com.entrypoint.mycinemalistyt.domain.PopularMovie
+import com.bumptech.glide.Glide
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import okhttp3.internal.wait
@@ -65,7 +66,7 @@ class MainActivity : AppCompatActivity(), CardOnClick {
     override fun onPause() {
         super.onPause()
         Log.i("lifecycle", "Main Activity is OnPause")
-
+        Glide.with(this).onLowMemory()
     }
 
 
@@ -82,10 +83,6 @@ class MainActivity : AppCompatActivity(), CardOnClick {
             layoutManager = GridLayoutManager(applicationContext, 2)
             adapter = cardAdapter
         }
-    }
-
-    private fun getScreenTest(){
-        Log.i("cards", "${66}")
     }
 
     override fun onCardClick(movie: PopularMovie) {
