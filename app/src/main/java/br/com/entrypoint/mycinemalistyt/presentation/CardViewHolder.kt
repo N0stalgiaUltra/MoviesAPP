@@ -9,7 +9,8 @@ import com.bumptech.glide.Glide
 
 class CardViewHolder(
     private val movieCardBinding: MovieCardBinding,
-    private val context: Context
+    private val context: Context,
+    private val onClick: CardOnClick
 ):RecyclerView.ViewHolder(movieCardBinding.root) {
 
     fun bindMovie(movie: PopularMovie){
@@ -27,5 +28,13 @@ class CardViewHolder(
         movieCardBinding.cardTitle.text = movie.title
         movieCardBinding.cardReleaseDate.text = releaseDateText
         movieCardBinding.cardVoteAvg.text = voteAvgText
+
+        movieCardBinding.movieCard.setOnClickListener {
+            onClick.onCardClick(
+                movie = movie
+            )
+        }
     }
+
+
 }

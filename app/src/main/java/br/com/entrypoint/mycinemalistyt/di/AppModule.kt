@@ -53,9 +53,3 @@ val viewModelModule = module {
         )
     }
 }
-
-val cardAdapterModule = module{
-    single {
-        CardAdapter()
-    }
-}

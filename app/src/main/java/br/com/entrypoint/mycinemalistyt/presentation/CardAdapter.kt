@@ -7,10 +7,11 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.entrypoint.mycinemalistyt.databinding.MovieCardBinding
 import br.com.entrypoint.mycinemalistyt.domain.PopularMovie
 
-class CardAdapter:
+class CardAdapter(private val cardOnClick: CardOnClick):
     RecyclerView.Adapter<CardViewHolder>() {
 
     private var movies: List<PopularMovie>? = emptyList()
+
 
     fun setMovies(movies: List<PopularMovie>?){
         this.movies = movies
@@ -27,7 +28,7 @@ class CardAdapter:
         val binding = MovieCardBinding.inflate(from, parent, false)
 
         return CardViewHolder(movieCardBinding = binding,
-            context = parent.context)
+            context = parent.context, onClick = cardOnClick)
     }
 
     override fun getItemCount(): Int{
@@ -36,8 +37,9 @@ class CardAdapter:
 
     override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
         val movie = movies?.get(position)
-        if(movie != null)
-            holder.bindMovie(movies?.get(position) ?: return)
+        if(movie != null) {
+            holder.bindMovie(movie)
+        }
     }
 
 
