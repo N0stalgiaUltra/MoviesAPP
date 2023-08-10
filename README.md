@@ -20,7 +20,8 @@ Movies App is a native Android App made with Kotlin. The app is capable of getti
 </br>
 
 <p float="left" align="center">
-TODO APP SCREENS 2-3
+<img alt="screenshot" width="30%" src="screenshots/moviesApp_1.png"/>
+<img alt="screenshot" width="30%" src="screenshots/moviesApp_2.png"/>
 </p>
 
 ## Download
@@ -49,12 +50,20 @@ Download the <a href="apk/app-debug.apk?raw=true">APK </a> directly from this re
   - [Retrofit & OkHTTP](https://square.github.io/retrofit/): 
   - [Koin](https://insert-koin.io/):
 
-# Third Party APIs
+## Third Party APIs
 
 [The Movies Database](https://www.themoviedb.org/?language=pt), this API provides all kind of data related to movies and series and it's completely free.
 
-# Features
-aqui entram os GIFs
+## Features
+
+### Popular movies listing
+<img src="screenshots/gif1_moviesApp.gif" width="25%"/>
+Layout created with CardView and Linear Layout. The app consumes the Movies API with Retrofit and OkHttp, and mapping the response into a movie object displayed by the Recycler View
+
+### Movie detail screen
+<img src="screenshots/gif2_moviesApp.gif" width="25%"/>
+Screen created to display the details about a movie card. This screen contains an abstract and others info about the movie selected. Those infos are passed by de Main Activity via Intent.
+
 
 # License
 aqui entra a licença
