@@ -1,6 +1,9 @@
 package br.com.entrypoint.mycinemalistyt.di
 
+import android.graphics.Movie
 import br.com.entrypoint.mycinemalistyt.data.remote.MoviesAPI
+import br.com.entrypoint.mycinemalistyt.data.remote.PopularMovieRepositoryImpl
+import br.com.entrypoint.mycinemalistyt.domain.PopularMovieRepository
 import br.com.entrypoint.mycinemalistyt.presentation.CardAdapter
 import br.com.entrypoint.mycinemalistyt.presentation.MainViewModel
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
@@ -49,8 +52,14 @@ val apiModule = module {
 val viewModelModule = module {
     viewModel {
         MainViewModel(
-            get()
+            repository = get()
         )
+    }
+}
+
+val repositoryModule = module {
+    single <PopularMovieRepository>{
+        PopularMovieRepositoryImpl(api = get())
     }
 }
 

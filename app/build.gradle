@@ -64,4 +64,7 @@ dependencies {
     implementation "org.koin:koin-androidx-viewmodel:$koin_version"
     implementation "org.koin:koin-androidx-fragment:$koin_version"
     implementation "org.koin:koin-androidx-workmanager:$koin_version"
+
+    //mockk
+    testImplementation 'io.mockk:mockk:1.10.6'
 }

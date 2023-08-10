@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.entrypoint.mycinemalistyt.databinding.ActivityMainBinding
@@ -72,8 +73,8 @@ class MainActivity : AppCompatActivity(), CardOnClick {
 
 
     private fun callPopularMovies(){
-        GlobalScope.launch{
-            mainViewModel.getPopularMovies()
+        lifecycleScope.launch{
+            mainViewModel.getMovies()
         }
     }
 
