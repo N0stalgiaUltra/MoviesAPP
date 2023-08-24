@@ -26,7 +26,7 @@ Movies App is a native Android App made with Kotlin. The app is capable of getti
 
 ## Download
 
-Download the <a href="apk/app-debug.apk?raw=true">APK </a> directly from this repo. You can check out <a href="https://www.google.com/search?q=how+to+install+apk+in+android">here</a> how to install an APK to your Android device.
+Download the <a href="https://github.com/N0stalgiaUltra/MoviesAPP/tree/main/apk">APK </a> directly from this repo. You can check out <a href="https://www.google.com/search?q=how+to+install+apk+in+android">here</a> how to install an APK to your Android device.
 
 ## Tech Stack
 
